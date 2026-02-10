@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NLP Fact Checker</title>
+</head>
+<body style="font-family: Arial; padding: 40px">
+
+    <h2>NLP Fact-Checking System</h2>
+
+    <form method="POST">
+        <input type="text" name="claim" placeholder="Enter a claim"
+               style="width: 400px; padding: 8px" required>
+        <br><br>
+        <button type="submit">Check Claim</button>
+    </form>
+
+    {% if result %}
+        <h3>Result: {{ result }}</h3>
+        <p>Confidence: {{ "%.2f"|format(confidence) }}</p>
+    {% endif %}
+
+</body>
+</html>
